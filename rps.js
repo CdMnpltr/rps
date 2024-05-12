@@ -1,9 +1,10 @@
 const choices = ['rock', 'paper', 'scissors'];
 
-    function getComputerChoice() {
-        return choices[Math.floor( Math.random() * choices.length)];
-    }
-console.log(getComputerChoice());
+function getComputerChoice() {
+    return choices[Math.floor( Math.random() * choices.length)];
+}
+let picks = prompt( 'Enter your choice' );
+console.log(picks);
 
 /*PseudoCode 
 
@@ -13,13 +14,11 @@ Create function getComputerChoice
 
     -- code below --
     
-    function getComputerChoice (rock, paper, scissor) {
+    function getComputerChoice () {
 
     }
 
-    
-
-    (Conditional: multiply Mathrandom by 100 then add 1 and create conditional (||?) that falls between 0-32(rock), 33-62(paper), 63-99(scissor)). 
+    (Conditional: use Math.random to create randomizer
 
         - create index with rock paper scissors as value (choices)
         - use mathRandom to pick out random value from index
@@ -38,7 +37,19 @@ const choices = [rock, paper, scissors];
     function getComputerChoice() {
         Math.floor( Math.random() * choices.length);
 
-Block 2 (test block 1 before continuing...)
+Block 2 
+Create function getHumanChoice
+
+        function getHumanChoice() {
+
+        }
+Write code that will return valid choices depending on user input.
+        - create a prompt that stores user input into function getHumanChoiceO()
+
+            let picks = prompt( 'Enter your choice' );
+
+        - make conditional that only accepts strings rock, paper, scissors 
+
 
 */
 
