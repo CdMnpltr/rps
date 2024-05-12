@@ -1,4 +1,9 @@
-console.log('Hello');
+const choices = ['rock', 'paper', 'scissors'];
+
+    function getComputerChoice() {
+        return choices[Math.floor( Math.random() * choices.length)];
+    }
+console.log(getComputerChoice());
 
 /*PseudoCode 
 
@@ -23,10 +28,15 @@ Create function getComputerChoice
 
     const choices = [rock, paper, scissors];
 
-    
+    function getComputerChoice() {
+        Math.floor( Math.random() * choices.length);
+    }
 
     // concat code below
+const choices = [rock, paper, scissors];
 
+    function getComputerChoice() {
+        Math.floor( Math.random() * choices.length);
 
 Block 2 (test block 1 before continuing...)
 
