@@ -14,7 +14,40 @@ function getHumanChoice() {
         return null; // Indicate invalid choice
     }
 }
+function playGame() {
+    for (let i = 1; i <=5; i++) {
+        let humanScore = 0;
+        let computerScore = 0;
 
+        function playRound(humanChoice, computerChoice) {
+            if (humanSelection === computerSelection) {
+                alert('It\'s a tie');
+            } else if (humanSelection === null) {
+                alert('Please choose between rock, paper, or scissors');
+            } else if (humanSelection === 'rock' && computerSelection === 'paper') {
+                alert('Your opponent picked paper');
+                computerScore++;
+            } else if (humanSelection === 'paper' && computerSelection === 'scissors') {
+                alert('Your opponent picked scissors');
+            } else if (humanSelection === 'scissors' && computerSelection === 'rock') {
+                alert('Your opponent picked rock');
+                computerScore++;
+
+            } else {
+                alert('Your choice wins');
+                humanScore++;
+            }
+        }
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+}   
+    }
+
+playGame();
+
+/* --
 let humanScore = 0;
 let computerScore = 0;
 
@@ -37,13 +70,12 @@ function playRound(humanChoice, computerChoice) {
            humanScore++;
        }
 }
-console
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
 
-console.log(humanSelection, computerSelection);
+-- */
 
 
 /* function gethumanChoice() {
@@ -125,15 +157,49 @@ Write Logic to play one round
         if (humanSelection === computerSelection) {
             alert('It's a tie')
         }
-
-
-        
-
+        -- the rest in live code --
     }
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
 
     playRound(humanSelection, computerSelection);
+
+Step5
+Write logic for game of 5 rounds
+
+    function playGame() {
+
+    }
+    - move playRound() and score variables inside playGame:
+        function playGame() {
+            let humanScore = 0;
+            let computerScore = 0;
+
+            function playRound(humanChoice, computerChoice) {
+                if (humanSelection === computerSelection) {
+                    alert('It\'s a tie');
+                } else if (humanSelection === null) {
+                    alert('Please choose between rock, paper, or scissors');
+                } else if (humanSelection === 'rock' && computerSelection === 'paper') {
+                    alert('Your opponent picked paper');
+                    computerScore++;
+                } else if (humanSelection === 'paper' && computerSelection === 'scissors') {
+                    alert('Your opponent picked scissors');
+                } else if (humanSelection === 'scissors' && computerSelection === 'rock') {
+                    alert('Your opponent picked rock');
+                    computerScore++;
+
+                } else {
+                    alert('Your choice wins');
+                    humanScore++;
+                }
+            }
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+
+            playRound(humanSelection, computerSelection);
+
+        }
 */
 
 
