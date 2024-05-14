@@ -28,8 +28,6 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
        } else if (humanSelection === 'paper' && computerSelection === 'scissors') {
         alert('Your opponent picked scissors');
-        com
-
        } else if (humanSelection === 'scissors' && computerSelection === 'rock') {
         alert('Your opponent picked rock');
         computerScore++;
