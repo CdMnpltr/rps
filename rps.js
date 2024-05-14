@@ -11,7 +11,6 @@ function getHumanChoice() {
     if (validChoices.includes(picks)) {
         return picks;
     } else {
-        alert('Please choose between rock, paper, or scissors');
         return null; // Indicate invalid choice
     }
 }
@@ -22,6 +21,8 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
        if (humanSelection === computerSelection) {
            alert('It\'s a tie');
+       } else if (humanSelection === null) {
+           alert('Please choose between rock, paper, or scissors');
        } else if (humanSelection === 'rock' && computerSelection === 'paper') {
         alert('Your opponent picked paper');
         computerScore++;
@@ -38,11 +39,13 @@ function playRound(humanChoice, computerChoice) {
            humanScore++;
        }
 }
-
+console
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+
+console.log(humanSelection, computerSelection);
 
 
 /* function gethumanChoice() {
