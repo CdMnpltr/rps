@@ -1,14 +1,68 @@
+/*save chatGPT log for this project */
 const choices = ['rock', 'paper', 'scissors'];
 
 function getComputerChoice() {
     return choices[Math.floor( Math.random() * choices.length)];
 }
-let picks = prompt( 'Enter your choice' );
-console.log(picks);
+
+function getHumanChoice() {
+    const validChoices = ['rock', 'paper', 'scissors'];
+    const picks = prompt('Enter your choice').toLowerCase();
+    if (validChoices.includes(picks)) {
+        return picks;
+    } else {
+        alert('Please choose between rock, paper, or scissors');
+        return null; // Indicate invalid choice
+    }
+}
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+       if (humanSelection === computerSelection) {
+           alert('It\'s a tie');
+       } else if (humanSelection === 'rock' && computerSelection === 'paper') {
+        alert('Your opponent picked paper');
+        computerScore++;
+       } else if (humanSelection === 'paper' && computerSelection === 'scissors') {
+        alert('Your opponent picked scissors');
+        com
+
+       } else if (humanSelection === 'scissors' && computerSelection === 'rock') {
+        alert('Your opponent picked rock');
+        computerScore++;
+
+       } else {
+           alert('Your choice wins');
+           humanScore++;
+       }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+
+/* function gethumanChoice() {
+
+    let picks;
+
+    if (picks !== 'rock' && picks !== 'paper' && picks !== 'scissors') {
+        alert('Please choose between rock, paper, scissors');
+    } return prompt('Enter your choice')
+    
+} */
+
+
+
+//console.log(picks);
+ 
 
 /*PseudoCode 
 
-Block 1
+Step 1
 Create function getComputerChoice
     - within, create code that returns random string: 'rock', 'paper', 'scissors' (can use Math.random)
 
@@ -37,7 +91,8 @@ const choices = [rock, paper, scissors];
     function getComputerChoice() {
         Math.floor( Math.random() * choices.length);
 
-Block 2 
+
+Step 2 
 Create function getHumanChoice
 
         function getHumanChoice() {
@@ -48,8 +103,38 @@ Write code that will return valid choices depending on user input.
 
             let picks = prompt( 'Enter your choice' );
 
-        - make conditional that only accepts strings rock, paper, scissors 
+        - make conditional that only accepts strings rock, paper, scissors -- see live code above --
+
+Step 3
+Create two new variables: humanScore and computerScore - initialize both with value of 0
 
 
+Step4
+Write Logic to play one round
+    - Create function named playRound
+        function playRound()
+    - Define two parameters for playRound:humanChoice and computerChoice
+        function playRound(humanChoice, computerChoice)
+    - Make variable
+
+    function playRound(humanChoice, computerChoice) {
+        // write logic of which string values win after selection and what happens after identical selection  -- code below --
+        // Logic to determine the winner based on the choices
+
+        if (humanSelection === computerSelection) {
+            alert('It's a tie')
+        }
+
+
+        
+
+    }
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    playRound(humanSelection, computerSelection);
 */
+
+
+
 
