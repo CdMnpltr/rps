@@ -1,4 +1,6 @@
 /*save chatGPT log for this project */
+let humanScore = 0;
+let computerScore = 0;
 const choices = ['rock', 'paper', 'scissors'];
 
 function getComputerChoice() {
@@ -16,9 +18,6 @@ function getHumanChoice() {
 }
 function playGame() {
     for (let i = 1; i <=5; i++) {
-        let humanScore = 0;
-        let computerScore = 0;
-
         function playRound(humanChoice, computerChoice) {
             if (humanSelection === computerSelection) {
                 alert('It\'s a tie');
@@ -29,6 +28,7 @@ function playGame() {
                 computerScore++;
             } else if (humanSelection === 'paper' && computerSelection === 'scissors') {
                 alert('Your opponent picked scissors');
+                computerScore++
             } else if (humanSelection === 'scissors' && computerSelection === 'rock') {
                 alert('Your opponent picked rock');
                 computerScore++;
@@ -37,13 +37,22 @@ function playGame() {
                 alert('Your choice wins');
                 humanScore++;
             }
-        }
+        } console.log(humanScore, computerScore);
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
 
         playRound(humanSelection, computerSelection);
-}   
-    }
+}   if (humanScore > computerScore) { 
+        alert('You win!');
+    } else if (humanScore === computerScore) {
+        alert('It\'s a draw. Play again!')
+    } else {
+    alert('Your opponent won'); 
+    } 
+    
+} 
+ 
+     // both score variables above are hidden from global scope so it wont work as intended. Use chat hints to figure out how to access both score variables within playGame()
 
 playGame();
 
