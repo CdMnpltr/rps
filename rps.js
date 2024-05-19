@@ -37,7 +37,7 @@ function playGame() {
                 alert('Your choice wins');
                 humanScore++;
             }
-        } console.log(humanScore, computerScore);
+        } 
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
 
@@ -50,10 +50,7 @@ function playGame() {
     alert('Your opponent won'); 
     } 
     
-} 
- 
-     // both score variables above are hidden from global scope so it wont work as intended. Use chat hints to figure out how to access both score variables within playGame()
-
+}
 playGame();
 
 /* --
