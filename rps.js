@@ -1,4 +1,3 @@
-/*save chatGPT log for this project */
 let humanScore = 0;
 let computerScore = 0;
 const choices = ['rock', 'paper', 'scissors'];
